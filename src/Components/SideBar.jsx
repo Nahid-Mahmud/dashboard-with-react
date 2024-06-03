@@ -40,7 +40,7 @@ const SideBar = () => {
           );
         })}
         <li
-          title={closeSidebar && "Close Menu"}
+          title={closeSidebar && "Open Menu"}
           className="flex items-center justify-center h-12  rounded-md cursor-pointer px-3 "
         >
           <button
