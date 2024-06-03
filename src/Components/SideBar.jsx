@@ -26,11 +26,15 @@ const SideBar = () => {
                 currentUrl?.pathname === item?.path ? "bg-blue-900 text-white" : ""
               } flex items-center justify-center h-12  rounded-md cursor-pointer ${!closeSidebar && "gap-2"} px-3 `}
             >
-              <span onClick={() => navigate(item?.path)} className="text-2xl flex items-center justify-center">
+              <span
+                title={closeSidebar && item.name}
+                onClick={() => navigate(item?.path)}
+                className="text-2xl flex items-center justify-center"
+              >
                 {item?.icons}
               </span>
               <Link className="w-full block" to={item?.path}>
-                <span className={`${closeSidebar ? "hidden" : ""} `}> {item?.name} </span>
+                <span className={`${closeSidebar ? "hidden" : ""} `}> {item?.name}  </span>
               </Link>
             </li>
           );
