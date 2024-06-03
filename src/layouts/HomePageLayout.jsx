@@ -11,7 +11,7 @@ export default function MainLayout() {
           <SideBar />
         </div>
         {/* Main content */}
-        <div className="flex-1 p-5">
+        <div className="flex-1 pt-6 pl-5">
           <Outlet />
         </div>
       </div>
