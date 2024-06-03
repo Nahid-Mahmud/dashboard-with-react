@@ -7,7 +7,7 @@ export default function MainLayout() {
     <Fragment>
       <div className="flex gap-5">
         {/* Side navigation bar  */}
-        <div className="w-1/12 min-h-screen flex justify-center py-5 border-r-2">
+        <div className=" min-h-screen">
           <SideBar />
         </div>
         {/* Main content */}

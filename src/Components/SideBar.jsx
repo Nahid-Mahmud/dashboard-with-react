@@ -1,34 +1,49 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { FaHome, FaQuestionCircle, FaRegArrowAltCircleRight } from "react-icons/fa";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { FaHome, FaQuestionCircle, FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GrServices } from "react-icons/gr";
 import { MdOutlineDashboard } from "react-icons/md";
+import { useState } from "react";
 
 const SideBar = () => {
+  const [closeSidebar, setCloseSidebar] = useState(false);
   const currentUrl = useLocation();
+  const navigate = useNavigate();
 
   return (
-    <div className="relative">
-      <ul className="space-y-5">
+    <div
+      className={`relative   min-h-screen flex justify-center py-5 transition-all duration-300 ease-in-out ${
+        !closeSidebar ? "border-r-2 px-3" : "px-2"
+      }`}
+    >
+      <ul className={`"space-y-5"`}>
         {routes?.map((item) => {
-          console.log(item?.path);
+          // console.log(item?.path);
           return (
             <li
               key={item?.path}
               className={`${
                 currentUrl?.pathname === item?.path ? "bg-blue-900 text-white" : ""
-              } flex items-center justify-center h-12 rounded-md cursor-pointer gap-2 px-3`}
+              } flex items-center justify-center h-12  rounded-md cursor-pointer ${!closeSidebar && "gap-2"} px-3 `}
             >
-              <span className="text-2xl">{item?.icons}</span>
+              <span onClick={() => navigate(item?.path)} className="text-2xl flex items-center justify-center">
+                {item?.icons}
+              </span>
               <Link className="w-full block" to={item?.path}>
-                {item?.name}
+                <span className={`${closeSidebar ? "hidden" : ""} `}> {item?.name} </span>
               </Link>
             </li>
           );
         })}
       </ul>
-      <FaRegArrowAltCircleRight className="text-3xl absolute -right-7 top-0" />
+      <button className="z-10" onClick={() => setCloseSidebar((prev) => !prev)}>
+        <FaRegArrowAltCircleRight
+          className={`text-3xl absolute -right-5 top-7 bg-white ${closeSidebar ? "hidden" : ""}`}
+        />
+        <FaRegArrowAltCircleLeft
+          className={`text-3xl absolute -right-6 top-7 bg-white ${closeSidebar ? "" : "hidden"}`}
+        />
+      </button>
     </div>
   );
 };
