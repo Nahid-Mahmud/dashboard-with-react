@@ -1,4 +1,3 @@
-import React from "react";
 import { RiDiscountPercentFill } from "react-icons/ri";
 import { MdOutlinePageview } from "react-icons/md";
 import { BsBoxArrowInDown } from "react-icons/bs";
