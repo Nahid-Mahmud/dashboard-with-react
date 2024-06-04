@@ -40,8 +40,8 @@ const BarchartDashboard = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
-      <BarChart width={830} height={350} data={data}>
+    <div className="flex flex-col items-center justify-center gap-5  lg:w-auto">
+      <BarChart width={830} height={350} data={data} className="w-1/2">
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

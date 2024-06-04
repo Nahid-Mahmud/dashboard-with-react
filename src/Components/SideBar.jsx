@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FaHome, FaQuestionCircle, FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GrServices } from "react-icons/gr";
@@ -14,7 +14,7 @@ const SideBar = () => {
     <div
       className={`relative   min-h-screen flex justify-center py-5 transition-all duration-300 ease-in-out ${
         !closeSidebar ? "border px-4 " : " border p-2"
-      }`}
+      } z-10`}
     >
       <ul className={`"space-y-5"`}>
         {routes?.map((item) => {
@@ -28,7 +28,7 @@ const SideBar = () => {
               } flex items-center justify-center h-12  rounded-md cursor-pointer ${!closeSidebar && "gap-2"} px-3 `}
             >
               <span
-                title={closeSidebar && item.name}
+                title={closeSidebar ? item.name : ""}
                 onClick={() => navigate(item?.path)}
                 className="text-2xl flex items-center justify-center"
               >
@@ -40,7 +40,7 @@ const SideBar = () => {
           );
         })}
         <li
-          title={closeSidebar && "Open Menu"}
+          title={closeSidebar ? "Open Menu" : ""}
           className="flex items-center justify-center h-12  rounded-md cursor-pointer px-3 "
         >
           <button
@@ -61,31 +61,31 @@ const SideBar = () => {
 
 const routes = [
   {
-    id: crypto.randomUUID(),
+    id: 1,
     path: "/home",
     name: "Home",
     icons: <FaHome />,
   },
   {
-    id: crypto.randomUUID(),
+    id: 2,
     path: "/about",
     name: "About",
     icons: <FaQuestionCircle />,
   },
   {
-    id: crypto.randomUUID(),
+    id: 3,
     path: "/contact",
     name: "Contact",
     icons: <MdOutlineContactPhone />,
   },
   {
-    id: crypto.randomUUID(),
+    id: 4,
     path: "/services",
     name: "Services",
     icons: <GrServices />,
   },
   {
-    id: crypto.randomUUID(),
+    id: 5,
     path: "/dashboard",
     name: "Dashboard",
     icons: <MdOutlineDashboard />,
