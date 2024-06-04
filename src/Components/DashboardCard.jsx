@@ -7,7 +7,7 @@ import LineBarAreaComposedChartDashboard from "./LineBarAreaComposedChartDashboa
 const DashboardCard = () => {
   return (
     <div>
-      <div className="grid grid-cols-5 p-5 gap-4">
+      <div className="grid xl:grid-cols-5 md:grid-cols-2 p-5 gap-4">
         <div className="bg-white shadow-md rounded-md p-4 ">
           <div className="flex items-center justify-center gap-10 h-20">
             <RiDiscountPercentFill className="text-5xl" />
@@ -41,7 +41,7 @@ const DashboardCard = () => {
 
       {/* Charts foom recharts */}
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="xl:grid xl:grid-cols-2 flex flex-col gap-5">
         <BarchartDashboard />
         <LineBarAreaComposedChartDashboard />
       </div>

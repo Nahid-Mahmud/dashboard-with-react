@@ -12,7 +12,7 @@ const SideBar = () => {
 
   return (
     <div
-      className={`relative   min-h-screen flex justify-center py-5 transition-all duration-300 ease-in-out ${
+      className={` fixed min-h-screen h-full bg-white flex justify-center py-5 transition-all duration-300 ease-in-out ${
         !closeSidebar ? "border px-4 " : " border p-2"
       } z-10  `}
     >
@@ -41,15 +41,15 @@ const SideBar = () => {
         })}
         <li
           title={closeSidebar ? "Open Menu" : ""}
-          className="flex items-center justify-center h-12  rounded-md cursor-pointer px-3 "
+          className="flex items-center justify-center h-12  rounded-md cursor-pointer md:px-3 "
         >
           <button
-            className=" flex items-center justify-center gap-[0.3rem]"
+            className=" flex items-center justify-center gap-[0.3rem] sm:gap-0"
             onClick={() => setCloseSidebar((prev) => !prev)}
           >
             <FaRegArrowAltCircleRight className={`text-3xl  bg-white ${closeSidebar ? "hidden" : ""}`} />
             <FaRegArrowAltCircleLeft className={`text-2xl  bg-white ${closeSidebar ? "" : "hidden"}`} />
-            <span className={`${closeSidebar ? "hidden" : ""} block w-full`}> Close Menu </span>
+            <span className={`${closeSidebar ? "hidden" : ""} block w-full  `}> Close Menu </span>
           </button>
         </li>
       </ul>

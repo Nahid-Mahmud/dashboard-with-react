@@ -5,7 +5,7 @@ import SideBar from "../Components/SideBar";
 export default function MainLayout() {
   return (
     <Fragment>
-      <div className="flex gap-5">
+      <div className="flex gap-10 ">
         {/* Side navigation bar  */}
         <div className=" min-h-screen">
           <SideBar />
