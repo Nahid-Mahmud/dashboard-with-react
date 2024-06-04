@@ -60,7 +60,7 @@ const data = [
 
 const LineBarAreaComposedChartDashboard = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5  lg:w-auto w-96  scroll-mx-10 scroll-auto overflow-x-auto">
+    <div className="md:flex flex-col items-center justify-center gap-5   lg:w-auto w-72  scroll-auto overflow-x-auto">
       <p className="font-bold text-2xl border-b-4 border-slate-950 pb-2">Month Performance</p>
 
       <ComposedChart

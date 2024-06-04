@@ -3,16 +3,24 @@ import { FaHome, FaQuestionCircle, FaRegArrowAltCircleLeft, FaRegArrowAltCircleR
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GrServices } from "react-icons/gr";
 import { MdOutlineDashboard } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useGetSidebarStateFromLocalStorage from "../Hooks/useGetSidebarStateFromLocalStorage";
 
 const SideBar = () => {
-  const [closeSidebar, setCloseSidebar] = useState(false);
+  const sidebarDataFromLocalStorage = useGetSidebarStateFromLocalStorage();
+  const [closeSidebar, setCloseSidebar] = useState(sidebarDataFromLocalStorage);
+
   const currentUrl = useLocation();
   const navigate = useNavigate();
 
+  // useEffect to update local storage whenever closeSidebar changes
+  useEffect(() => {
+    localStorage.setItem("sidebar", JSON.stringify(closeSidebar));
+  }, [closeSidebar]);
+
   return (
     <div
-      className={` fixed min-h-screen h-full bg-white flex justify-center py-5 transition-all duration-300 ease-in-out ${
+      className={` fixed md:static min-h-screen h-full bg-white flex justify-center py-5 transition-all duration-300 ease-in-out ${
         !closeSidebar ? "border px-4 " : " border p-2"
       } z-10  `}
     >
