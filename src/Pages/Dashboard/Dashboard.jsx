@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import DashboardCard from "../../Components/DashboardCard";
 
 const Dashboard = () => {
-    return (
-        <div>
-            Dashboard
-        </div>
-    );
+  return (
+    <div>
+      <DashboardCard />
+    </div>
+  );
 };
 
 export default Dashboard;
