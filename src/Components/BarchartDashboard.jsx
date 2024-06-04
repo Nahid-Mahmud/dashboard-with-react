@@ -41,6 +41,7 @@ const BarchartDashboard = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-5  lg:w-auto">
+      <p className="font-bold text-2xl border-b-4 border-slate-950 pb-2">Week Performance</p>
       <BarChart width={830} height={350} data={data} className="w-1/2">
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
@@ -50,8 +51,6 @@ const BarchartDashboard = () => {
         <Bar dataKey="pv" fill="#003285" />
         <Bar dataKey="uv" fill="#2A629A" />
       </BarChart>
-
-      <p className="font-bold text-2xl border-b-4 border-slate-950 pb-2">Week Performance</p>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { RiDiscountPercentFill } from "react-icons/ri";
 import { MdOutlinePageview } from "react-icons/md";
 import { BsBoxArrowInDown } from "react-icons/bs";
 import BarchartDashboard from "./BarchartDashboard";
+import LineBarAreaComposedChartDashboard from "./LineBarAreaComposedChartDashboard";
 
 const DashboardCard = () => {
   return (
@@ -40,8 +41,9 @@ const DashboardCard = () => {
 
       {/* Charts foom recharts */}
 
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-5">
         <BarchartDashboard />
+        <LineBarAreaComposedChartDashboard />
       </div>
     </div>
   );

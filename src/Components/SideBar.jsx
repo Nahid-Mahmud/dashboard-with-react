@@ -14,7 +14,7 @@ const SideBar = () => {
     <div
       className={`relative   min-h-screen flex justify-center py-5 transition-all duration-300 ease-in-out ${
         !closeSidebar ? "border px-4 " : " border p-2"
-      } z-10`}
+      } z-10  `}
     >
       <ul className={`"space-y-5"`}>
         {routes?.map((item) => {
