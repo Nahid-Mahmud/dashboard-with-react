@@ -32,7 +32,7 @@ const DashboardCard = () => {
           <div className="flex items-center justify-center md:gap-10 gap-2 md:h-20">
             <BsBoxArrowInDown className="md:text-5xl" />
             <div>
-              <p className="md:text-3xl">66.36%</p>
+              <p className="md:text-3xl">558</p>
               <p className="md:text-2xl text-slate-400">Total Downloads</p>
             </div>
           </div>

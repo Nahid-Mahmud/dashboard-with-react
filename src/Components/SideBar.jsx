@@ -6,10 +6,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { useEffect, useState } from "react";
 import useGetSidebarStateFromLocalStorage from "../Hooks/useGetSidebarStateFromLocalStorage";
 
-const SideBar = () => {
-  const sidebarDataFromLocalStorage = useGetSidebarStateFromLocalStorage();
-  const [closeSidebar, setCloseSidebar] = useState(sidebarDataFromLocalStorage);
-
+const SideBar = ({ closeSidebar, setCloseSidebar }) => {
   const currentUrl = useLocation();
   const navigate = useNavigate();
 
