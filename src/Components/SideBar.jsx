@@ -3,8 +3,7 @@ import { FaHome, FaQuestionCircle, FaRegArrowAltCircleLeft, FaRegArrowAltCircleR
 import { MdOutlineContactPhone } from "react-icons/md";
 import { GrServices } from "react-icons/gr";
 import { MdOutlineDashboard } from "react-icons/md";
-import { useEffect, useState } from "react";
-import useGetSidebarStateFromLocalStorage from "../Hooks/useGetSidebarStateFromLocalStorage";
+import { useEffect } from "react";
 
 const SideBar = ({ closeSidebar, setCloseSidebar }) => {
   const currentUrl = useLocation();

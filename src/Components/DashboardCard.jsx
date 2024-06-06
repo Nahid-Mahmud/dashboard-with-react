@@ -10,7 +10,7 @@ const DashboardCard = () => {
       <div className="md:grid xl:grid-cols-5 md:grid-cols-2 flex flex-col p-5 gap-2">
         <div className="bg-white shadow-md rounded-md md:p-4 p-1  md:w-full ">
           <div className="flex items-center justify-center md:gap-10 gap-2 md:h-20">
-            <RiDiscountPercentFill className="md:text-5xl" />
+            <RiDiscountPercentFill className="md:text-5xl text-4xl" />
             <div>
               <p className="md:text-3xl">49.65%</p>
               <p className="md:text-2xl text-slate-400">Performance</p>
@@ -20,7 +20,7 @@ const DashboardCard = () => {
 
         <div className="bg-white shadow-md rounded-md md:p-4 p-1  md:w-full ">
           <div className="flex items-center justify-center md:gap-10 gap-2 md:h-20">
-            <MdOutlinePageview className="md:text-5xl" />
+            <MdOutlinePageview className="md:text-5xl text-4xl" />
             <div>
               <p className="md:text-3xl">66.36%</p>
               <p className="md:text-2xl text-slate-400">Page View</p>
@@ -30,7 +30,7 @@ const DashboardCard = () => {
 
         <div className="bg-white shadow-md rounded-md md:p-4 p-1  md:w-full">
           <div className="flex items-center justify-center md:gap-10 gap-2 md:h-20">
-            <BsBoxArrowInDown className="md:text-5xl" />
+            <BsBoxArrowInDown className="md:text-5xl text-4xl" />
             <div>
               <p className="md:text-3xl">558</p>
               <p className="md:text-2xl text-slate-400">Total Downloads</p>
